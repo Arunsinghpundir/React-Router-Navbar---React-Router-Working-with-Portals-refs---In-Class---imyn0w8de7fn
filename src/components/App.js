@@ -9,16 +9,16 @@ const App = () => {
     <div id="main">
       <BrowserRouter>
         <Switch>
-          <Route>
+          <Route exact path={"/"}>
             <div id='navbar'>
-              <div id='home-link'> Home</div>
-              <div id='aboutus-link'>About Us</div>
+             <div id='home-link'>  <Link to={"/home"}>Home</Link></div>
+              <div id='aboutus-link'><Link to={"/about"}>About Us</Link></div>
             </div>
           </Route>
-          <Route>
+          <Route exact path={"/home"}>
             <Home />
           </Route>
-          <Route >
+          <Route exact path={"/about"} >
             <AboutUs />
           </Route>
         </Switch>
